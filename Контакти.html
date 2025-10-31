@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Контакти</title>
+  <link rel="icon" href="images/ukrtelecom.png" type="image/png">
+  
+  <!-- SEO -->
+  <meta property="og:url" content="https://укртелеком.pp.ua/Контакти">
+  <meta property="og:image" content="images/poster-contacts.png">
+  <meta property="og:site_name" content="Укртелеком">
+  <meta property="og:title" content="Контакти, соцмережі та інформація.">
+  <meta name="description" content="Контакти, соцмережі та інформація." />
+<meta name="keywords" content="Контакти Укртелеком, Укртелеком, укртелеком, Укртелеком Закарпаття, укртелеком закарпаття, Інтернет Тересва, Інтернет Бедевля, Інтернет Тячів, Інтернет Буштино, Інтернет Колочава, Інтеренет Солотвино, Інтернет Синевир, Інтернет Тарасівка, Інтернет Негровець, Інтернет Глиняний, Інтернет Хуст, Оптичний інтернет, Швидкісний інтернет, Закарпаття, Тересва, Бедевля, Тячів, Буштино, Солотвино, Синевир, Негровець, Глиняний, Тарасівка, Колочава, Хуст, Ужгород" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Questrial&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', 'Questrial', sans-serif;
+      background: #ffffff;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background-color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    header img {
+      height: 36px;
+    }
+
+    .menu-icon {
+      width: 28px;
+      height: 28px;
+      cursor: pointer;
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .menu {
+      position: fixed;
+      top: 66px;
+      left: 0;
+      right: 0;
+      background-color: white;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      animation: slideDown 0.3s ease forwards;
+    }
+
+    .menu.active {
+      display: flex;
+    }
+
+    .menu a {
+      padding: 12px 20px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      width: 100%;
+      text-align: center;
+      border-bottom: 1px solid #eee;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    @keyframes slideDown {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .desktop-menu {
+      display: none;
+      gap: 20px;
+    }
+
+    .desktop-menu a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      font-size: 16px;
+      transition: color 0.3s ease;
+    }
+
+    .desktop-menu a:hover {
+      color: #0077cc;
+    }
+
+    @media (min-width: 768px) {
+      .desktop-menu {
+        display: flex;
+      }
+
+      .menu-icon {
+        display: none;
+      }
+
+      .menu {
+        display: none !important;
+      }
+    }
+
+    .contacts {
+      padding: 15px 20px 40px;
+      text-align: center;
+    }
+
+    .contacts h2 {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 25px;
+    }
+
+    .contact-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      font-size: 18px;
+      font-weight: 500;
+      text-decoration: none;
+      color: #333;
+      padding: 10px 16px;
+      border-radius: 12px;
+      background-color: #f9f9f9;
+      width: 260px;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .contact-item img {
+      width: 40px;
+      height: 40px;
+      border-radius: 8px;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .contact-item span {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .divider {
+      width: 200px;
+      border: none;
+      border-top: 1px solid #000000;
+      margin: 20px auto 8px;
+    }
+
+    .phone-label {
+      font-size: 18.5px;
+      font-weight: 500;
+      margin-top: 4px;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .phone-number {
+      font-size: 16.5px;
+      font-family: 'Questrial', serif;
+      margin-top: 2px;
+      -webkit-tap-highlight-color: transparent;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="https://ukrtelecom.store/img/logo.png" alt="Логотип">
+    <nav class="desktop-menu">
+      <a href="https://укртелеком.pp.ua">Головна</a>
+      <a href="Новини">Новини</a>
+      <a href="Оплата">Оплата</a>
+      <a href="https://ukrtelecom.ua/payment/generate-bill">Кабінет</a>
+      <a href="Контакти">Контакти</a>
+    </nav>
+    <img src="https://www.svgrepo.com/show/311018/navigation.svg" alt="Меню" class="menu-icon" id="menuToggle">
+  </header>
+
+  <div class="menu" id="menu">
+    <a href="https://укртелеком.pp.ua">Головна</a>
+    <a href="Новини">Новини</a>
+    <a href="Оплата">Оплата</a>
+    <a href="https://ukrtelecom.ua/payment/generate-bill">Кабінет</a>
+    <a href="Контакти">Контакти</a>
+  </div>
+
+  <div class="contacts">
+    <h2>Контакти</h2>
+    <div class="contact-list">
+      <a class="contact-item" href="viber://chat?number=380969803151" target="_blank">
+        <img src="/images/viber.png" alt="Viber">
+        <span>Написати у Viber</span>
+      </a>
+      <a class="contact-item" href="https://t.me/+380969803151" target="_blank">
+        <img src="/images/telegram.png" alt="Telegram">
+        <span>Написати у Telegram</span>
+      </a>
+      <a class="contact-item" href="tel:+380969803151">
+        <img src="/images/call.png" alt="Call">
+        <span>Зателефонувати</span>
+      </a>
+    </div>
+    <hr class="divider">
+    <div class="phone-label">Контактний номер</div>
+    <div class="phone-number">+380 96 98 03 151</div>
+  </div>
+
+  <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const menu = document.getElementById("menu");
+    let menuOpen = false;
+
+    menuToggle.addEventListener("click", () => {
+      menuOpen = !menuOpen;
+      menu.classList.toggle("active");
+      menuToggle.src = menuOpen
+        ? "https://www.svgrepo.com/show/440627/navigationclose.svg"
+        : "https://www.svgrepo.com/show/311018/navigation.svg";
+    });
+  </script>
+</body>
+</html>

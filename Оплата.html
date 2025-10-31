@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Оплата Укртелеком</title>
+  <link rel="icon" href="images/ukrtelecom.png" type="image/png">
+  
+  <!-- SEO -->
+  <meta property="og:url" content="https://укртелеком.pp.ua/Оплата">
+  <meta property="og:image" content="images/poster-oplata.png">
+  <meta property="og:site_name" content="Укртелеком">
+  <meta property="og:title" content="💸 Онлайн-оплата інтернету від Укртелеком ⚡ Як оплатити інтернет ?">
+  <meta name="description" content="💸 Онлайн-оплата інтернету від Укртелеком ⚡ Як оплатити інтернет ?" />
+<meta name="keywords" content="Оплата інтернету Укртелеком, Укртелеком, укртелеком, Укртелеком Закарпаття, укртелеком закарпаття, Інтернет Тересва, Інтернет Бедевля, Інтернет Тячів, Інтернет Буштино, Інтернет Колочава, Інтеренет Солотвино, Інтернет Синевир, Інтернет Тарасівка, Інтернет Негровець, Інтернет Глиняний, Інтернет Хуст, Оптичний інтернет, Швидкісний інтернет, Закарпаття, Тересва, Бедевля, Тячів, Буштино, Солотвино, Синевир, Негровець, Глиняний, Тарасівка, Колочава, Хуст, Ужгород" />
+  <link href="https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+
+    body {
+      font-family: 'Gentium Book Plus', serif;
+      background: ;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .wrapper {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background-color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    header img {
+      height: 36px;
+    }
+
+    .menu-icon {
+      width: 28px;
+      height: 28px;
+      cursor: pointer;
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .menu {
+      position: fixed;
+      top: 66px;
+      left: 0;
+      right: 0;
+      background-color: white;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      animation: slideDown 0.3s ease forwards;
+    }
+
+    .menu.active {
+      display: flex;
+    }
+
+    .menu a {
+      padding: 12px 20px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      width: 100%;
+      text-align: center;
+      border-bottom: 1px solid #eee;
+    }
+
+    .menu a:hover {
+      background-color: #f5f5f5;
+    }
+
+    @keyframes slideDown {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .desktop-menu {
+      display: none;
+      gap: 20px;
+    }
+
+    .desktop-menu a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      font-size: 16px;
+      transition: color 0.3s ease;
+    }
+
+    .desktop-menu a:hover {
+      color: #0077cc;
+    }
+
+    @media (min-width: 768px) {
+      .desktop-menu {
+        display: flex;
+      }
+
+      .menu-icon {
+        display: none;
+      }
+
+      .menu {
+        display: none !important;
+      }
+    }
+
+    .payment-section {
+      margin-top: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 20px;
+      box-sizing: border-box;
+      text-align: center;
+    }
+
+    .logo-box {
+      display: inline-block;
+      padding: 10px;
+      border-radius: 12px;
+      background-color: #ffffff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      margin-bottom: 8px;
+    }
+
+    .logo-box img {
+      height: 48px;
+      width: 48px;
+      object-fit: contain;
+      display: block;
+    }
+
+    .payment-text {
+      font-size: 16px;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 8px;
+    }
+
+    .payment-text a {
+      color: #d00000;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .payment-text a:hover {
+      text-decoration: underline;
+    }
+
+    hr.divider {
+      width: 60%;
+      border: none;
+      border-top: 1px solid #ccc;
+      margin: 8px auto;
+    }
+
+    /* Carousel container */
+    .bank-carousel {
+      width: 100%;
+      overflow: hidden;
+      background: linear-gradient(180deg, #ffffff 0%, #ffffff 100%);
+      padding: 18px 0;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Track that moves */
+    .bank-track {
+      display: flex;
+      gap: 36px;
+      align-items: center;
+      width: max-content;
+      will-change: transform;
+      transform: translateX(0);
+    }
+
+    /* Each logo item */
+    .bank-item {
+      flex: 0 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 120px;
+      height: 48px;
+      pointer-events: none;
+      user-select: none;
+      -webkit-user-drag: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .bank-item img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      display: block;
+      filter: saturate(1) contrast(1);
+      pointer-events: none;
+      user-select: none;
+      -webkit-user-drag: none;
+    }
+
+    /* Текст під каруселлю */
+    .carousel-note {
+      margin-top: 12px;
+      font-size: 15px;
+      color: #333;
+      text-align: center;
+    }
+
+    @media (max-width: 480px) {
+      .bank-track {
+        gap: 20px;
+      }
+      .bank-item {
+        width: 90px;
+        height: 44px;
+      }
+      .carousel-note {
+        font-size: 16px;
+      }
+    }
+
+    .footer {
+      background-color: #ffffff;
+      text-align: center;
+      padding: 20px;
+      font-size: 15.9px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <img src="https://ukrtelecom.store/img/logo.png" alt="Логотип">
+      <nav class="desktop-menu">
+        <a href="https://укртелеком.pp.ua">Головна</a>
+        <a href="Новини">Новини</a>
+        <a href="Оплата">Оплата</a>
+        <a href="https://ukrtelecom.ua/payment/generate-bill">Кабінет</a>
+        <a href="Контакти">Контакти</a>
+      </nav>
+      <img src="https://www.svgrepo.com/show/311018/navigation.svg" alt="Меню" class="menu-icon" id="menuToggle">
+    </header>
+
+    <div class="menu" id="menu">
+      <a href="https://укртелеком.pp.ua">Головна</a>
+      <a href="Новини">Новини</a>
+      <a href="Оплата">Оплата</a>
+      <a href="https://ukrtelecom.ua/payment/generate-bill">Кабінет</a>
+      <a href="Контакти">Контакти</a>
+    </div>
+
+    <div class="payment-section">
+      <a href="https://www.portmone.com.ua/r3/popovnyty-internet-ukrtelecom-nomer-osobovogo-rakhunku" target="_blank" class="logo-box">
+        <img src="/Images/portmone.png" alt="Portmone Logo">
+      </a>
+      <div class="payment-text">
+        Сплачуйте за інтернет без комісії на <a href="https://www.portmone.com.ua/r3/popovnyty-internet-ukrtelecom-nomer-osobovogo-rakhunku" target="_blank">Portmone.com</a>
+      </div>
+      <hr class="divider">
+
+      <!-- Карусель логотипів банків -->
+      <div class="bank-carousel" role="region" aria-label="Карусель логотипів банків">
+        <div class="bank-track" id="bankTrack" aria-hidden="true">
+          <!-- Єдиний список логотипів (один раз) -->
+          <div class="bank-item"><img src="Images/Privatbank.png" alt="ПриватБанк"></div>
+          <div class="bank-item"><img src="/Images/Oschadbank.png" alt="Ощадбанк"></div>
+          <div class="bank-item"><img src="/Images/Monobank.png" alt="Monobank"></div>
+          <div class="bank-item"><img src="/Images/Raiffeisenbank.png" alt="Райффайзенбанк"></div>
+          <div class="bank-item"><img src="/Images/Ukrsibbank.png" alt="Укрсіб Банк"></div>
+          <div class="bank-item"><img src="/Images/Sensebank.png" alt="Sense Банк"></div>
+          <div class="bank-item"><img src="/Images/Pumbbank.png" alt="Пумб  Банк"></div>       
+          <div class="bank-item"><img src="/Images/Abank.png" alt="А-Банк"></div>
+          <div class="bank-item"><img src="/Images/Otpbank.png" alt="OTP Bank"></div>
+        </div>
+      </div>
+
+      <div class="carousel-note" id="carouselNote">
+        Також оплата доступна у всіх застосунках банків України
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    © <span id="year"></span> Укртелеком
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const menu = document.getElementById("menu");
+    let menuOpen = false;
+
+    if (menuToggle) {
+      menuToggle.addEventListener("click", () => {
+        menuOpen = !menuOpen;
+        if (menu) menu.classList.toggle("active");
+        menuToggle.src = menuOpen
+          ? "https://www.svgrepo.com/show/440627/navigationclose.svg"
+          : "https://www.svgrepo.com/show/311018/navigation.svg";
+      });
+    }
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    (function singleListSeamless() {
+      const track = document.getElementById('bankTrack');
+      if (!track) return;
+
+      // Забороняємо взаємодію з каруселлю
+      ['wheel','touchstart','touchmove','touchend','pointerdown','pointermove','pointerup','pointercancel'].forEach(evt => {
+        track.addEventListener(evt, e => { e.preventDefault(); e.stopPropagation(); }, { passive: false });
+      });
+      track.setAttribute('tabindex', '-1');
+
+      // Додаємо буферну копію перших елементів для плавності старту (не більше однієї дублікати повного списку)
+      const originalChildren = Array.from(track.children);
+      originalChildren.forEach(n => track.appendChild(n.cloneNode(true)));
+
+      let offset = 0;
+      let lastTime = performance.now();
+      const speedPxPerSec = 60; // регулюйте швидкість тут
+
+      function getGap() {
+        return parseFloat(getComputedStyle(track).gap) || 0;
+      }
+
+      // Анімаційний цикл: рухаємо трек, а коли перший елемент повністю вийде — переноcимо його клон в кінець і скоригуємо offset
+      function step(now) {
+        const dt = (now - lastTime) / 1000;
+        lastTime = now;
+        offset += speedPxPerSec * dt;
+
+        // Перевіряємо, чи перший елемент повністю вийшов
+        while (track.firstElementChild) {
+          const first = track.firstElementChild;
+          const firstWidth = Math.round(first.getBoundingClientRect().width + getGap());
+          if (offset >= firstWidth) {
+            offset -= firstWidth;
+            // Клонуємо перший і додаємо в кінець, потім видаляємо оригінал
+            const clone = first.cloneNode(true);
+            track.appendChild(clone);
+            track.removeChild(first);
+            continue;
+          }
+          break;
+        }
+
+        track.style.transform = 'translateX(' + (-offset) + 'px)';
+        requestAnimationFrame(step);
+      }
+
+      requestAnimationFrame((t) => { lastTime = t; requestAnimationFrame(step); });
+
+      // При ресайзі ресетуємо offset і додаємо одну групу назад, якщо потрібно
+      let resizeTimer;
+      window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+          track.style.transform = 'translateX(0)';
+          offset = 0;
+          if (track.children.length < originalChildren.length * 2) {
+            const currentOriginal = Array.from(track.children).slice(0, originalChildren.length);
+            currentOriginal.forEach(n => track.appendChild(n.cloneNode(true)));
+          }
+        }, 120);
+      });
+    })();
+  </script>
+</body>
+</html>

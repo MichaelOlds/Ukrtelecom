@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Інтернет Негровець</title>
+  <link rel="icon" href="images/ukrtelecom.png" type="image/png">
+  
+  <!-- SEO -->
+  <meta property="og:url" content="https://укртелеком.pp.ua/Негровець">
+  <meta property="og:image" content="images/poster-negrovec.png">
+  <meta property="og:site_name" content="Укртелеком">
+  <meta property="og:title" content="⚡ Енергонезалежний оптичний інтернет 🔥 Тарифи — від 100 Мбіт/с до 1 Гігабіт/с 🏡 Швидке підключення +380 96 98 03 151">
+  <meta name="description" content="⚡ Енергонезалежний оптичний інтернет 🔥 Тарифи — від 100 Мбіт/с до 1 Гігабіт/с 🏡 Швидке підключення +380 96 98 03 151" />
+  <meta name="keywords" content="Укртелеком, укртелеком, Укртелеком Закарпаття, укртелеком закарпаття, Інтернет Негровець, Негровець" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Noto+Emoji&family=Gentium+Book+Plus:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', 'Gentium Book Plus', 'Noto Emoji', sans-serif;
+      background: #ffffff;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background-color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    header img {
+      height: 36px;
+    }
+
+    .menu-icon {
+      width: 28px;
+      height: 28px;
+      cursor: pointer;
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .menu {
+      position: fixed;
+      top: 66px;
+      left: 0;
+      right: 0;
+      background-color: white;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      animation: slideDown 0.3s ease forwards;
+    }
+
+    .menu.active {
+      display: flex;
+    }
+
+    .menu a {
+      padding: 12px 20px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      width: 100%;
+      text-align: center;
+      border-bottom: 1px solid #eee;
+    }
+
+    .menu a:hover {
+      background-color: #f5f5f5;
+    }
+
+    @keyframes slideDown {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .desktop-menu {
+      display: none;
+      gap: 20px;
+    }
+
+    .desktop-menu a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      font-size: 16px;
+      transition: color 0.3s ease;
+    }
+
+    .desktop-menu a:hover {
+      color: #0077cc;
+    }
+
+    @media (min-width: 768px) {
+      .desktop-menu {
+        display: flex;
+      }
+
+      .menu-icon {
+        display: none;
+      }
+
+      .menu {
+        display: none !important;
+      }
+    }
+
+    .tariffs-section {
+      text-align: center;
+      margin-top: 60px;
+      margin-bottom: 20px;
+    }
+
+    .tariffs-section h2 {
+      margin: 40px 0;
+      font-size: 28px;
+    }
+
+    .photos {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+      padding: 20px;
+    }
+
+    .tariff-photo {
+      flex: 1 1 280px;
+      max-width: 320px;
+      text-align: center;
+    }
+
+    .tariff-photo img {
+      width: 100%;
+      border-radius: 76px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .advantages-section {
+      text-align: left;
+      margin: 20px auto;
+      padding: 30px 20px;
+      background-color: #fefefe;
+      color: #222;
+      border-radius: 12px;
+      max-width: 800px;
+    }
+
+    .advantages-section h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .advantages-section ul {
+      list-style: none;
+      padding: 0;
+      font-size: 20px;
+      line-height: 2;
+    }
+
+    .advantages-section li {
+      margin: 10px 0;
+    }
+
+    .advantages-section li::before {
+      font-family: 'Noto Emoji', sans-serif;
+      margin-right: 10px;
+    }
+
+    .advantages-section li:nth-child(1)::before { content: "⚡"; }
+    .advantages-section li:nth-child(2)::before { content: "🔥"; }
+    .advantages-section li:nth-child(3)::before { content: "🌐"; }
+    .advantages-section li:nth-child(4)::before {
+      content: "₴";
+      margin-right: 17px;
+    }
+
+    .advantages-section li:nth-child(4) {
+      padding-left: 8px;
+    }
+
+    .connect-button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 24px;
+      font-size: 18px;
+      font-weight: 600;
+      color: #111;
+      border: 2px solid #111;
+      background-color: transparent;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .connect-button:hover {
+      background-color: #111;
+      color: #fff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 16px;
+      font-family: 'Gentium Book Plus', serif;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="https://ukrtelecom.store/img/logo.png" alt="Логотип">
+    <nav class="desktop-menu">
+      <a href="https://укртелеком.pp.ua">Головна</a>
+      <a href="Новини">Новини</a>
+      <a href="Оплата">Оплата</a>
+      <a href="https://ukrtelecom.ua/payment/generate-bill">Кабінет</a>
+      <a href="Контакти">Контакти</a>
+    </nav>
+    <img src="https://www.svgrepo.com/show/311018/navigation.svg" alt="Меню" class="menu-icon" id="menuToggle">
+  </header>
+
+  <div class="menu" id="menu">
+    <a href="https://укртелеком.pp.ua">Головна</a>
+    <a href="Новини">Новини</a>
+    <a href="Оплата">Оплата</a>
+    <a href="https://ukrtelecom.ua/payment/generate-bill">Кабінет</a>
+    <a href="Контакти">Контакти</a>
+  </div>
+
+  <div class="tariffs-section">
+    <h2>Тарифи в с. Негровець</h2>
+    <div class="photos" id="tariffPhotos"></div>
+  </div>
+
+  <div class="advantages-section">
+    <h2>Наші переваги</h2>
+    <ul>
+      <li>Інтернет навіть без світла</li>
+      <li>Великий вибір тарифних планів</li>
+      <li>Безперебійна робота 24/7</li>
+      <li>Низька ціна</li>
+    </ul>
+    <a href="Підключитися" class="connect-button">Підключитися</a>
+  </div>
+
+  <footer>
+    © <span id="year"></span> Укртелеком
+  </footer>
+
+  <script>
+    const photosContainer = document.getElementById("tariffPhotos");
+    const menuToggle = document.getElementById("menuToggle");
+    const menu = document.getElementById("menu");
+
+    const defaultTariffs = [
+      {
+        image: "/images/100.png"
+      },
+      {
+        image: "images/200.png"
+      },
+      {
+        image: "images/gigabit.png"
+      }
+    ];
+
+    function createPhoto(tariff) {
+      const photoBlock = document.createElement("div");
+      photoBlock.className = "tariff-photo";
+
+      photoBlock.innerHTML = `
+        <img src="${tariff.image}" alt="Тариф">
+      `;
+
+      return photoBlock;
+    }
+
+    function updatePhotos() {
+      photosContainer.innerHTML = "";
+      defaultTariffs.forEach(tariff => {
+        photosContainer.appendChild(createPhoto(tariff));
+      });
+    }
+
+    updatePhotos();
+
+    let menuOpen = false;
+
+    menuToggle.addEventListener("click", () => {
+      menuOpen = !menuOpen;
+      menu.classList.toggle("active");
+
+      menuToggle.src = menuOpen
+        ? "https://www.svgrepo.com/show/440627/navigationclose.svg"
+        : "https://www.svgrepo.com/show/311018/navigation.svg";
+    });
+
+    // Встановлення поточного року у футері
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

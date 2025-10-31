@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Новини</title>
+  <link rel="icon" href="images/ukrtelecom.png" type="image/png">
+  
+  <!-- SEO -->
+  <meta property="og:url" content="https://укртелеком.pp.ua/Новини">
+  <meta property="og:image" content="images/poster-news.png">
+  <meta property="og:site_name" content="Укртелеком">
+  <meta property="og:title" content="🔥 Новини, ацкії та зміни.">
+  <meta name="description" content="🔥 Новини, акції та зміни." />
+<meta name="keywords" content="Новини Укртелеком, Акції Укртелеком, Зміни Укртелеком, Укртелеком, укртелеком, Укртелеком Закарпаття, укртелеком закарпаття, Інтернет Тересва, Інтернет Бедевля, Інтернет Тячів, Інтернет Буштино, Інтернет Колочава, Інтеренет Солотвино, Інтернет Синевир, Інтернет Тарасівка, Інтернет Негровець, Інтернет Глиняний, Інтернет Хуст, Оптичний інтернет, Швидкісний інтернет, Закарпаття, Тересва, Бедевля, Тячів, Буштино, Солотвино, Синевир, Негровець, Глиняний, Тарасівка, Колочава, Хуст, Ужгород" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { margin:0; font-family:'Poppins',sans-serif; background:#f9f9f9; }
+    header {
+      position:sticky; top:0; z-index:1000; background-color:#fff;
+      display:flex; justify-content:space-between; align-items:center;
+      padding:15px 30px; box-shadow:0 2px 4px rgba(0,0,0,0.05);
+    }
+    header img { height:36px; }
+    .menu-icon { width:28px; height:28px; cursor:pointer; }
+    .menu {
+      position:fixed; top:66px; left:0; right:0; background-color:#fff;
+      box-shadow:0 4px 8px rgba(0,0,0,0.1); display:none; flex-direction:column;
+      align-items:center;
+    }
+    .menu.active { display:flex; }
+    .menu a {
+      padding:12px 20px; text-decoration:none; color:#333; font-weight:500;
+      width:100%; text-align:center; border-bottom:1px solid #eee;
+    }
+    .menu a:hover { background-color:#f5f5f5; }
+
+    .desktop-menu { display:none; gap:20px; }
+    .desktop-menu a {
+      text-decoration:none; color:#333; font-weight:500; font-size:16px;
+      transition:color .3s;
+    }
+    .desktop-menu a:hover { color:#0077cc; }
+
+    @media(min-width:768px){
+      .desktop-menu{ display:flex; }
+      .menu-icon{ display:none; }
+      .menu{ display:none !important; }
+    }
+
+    #news-container, #news-detail {
+      max-width:1200px; margin:40px auto; padding:0 20px;
+    }
+
+    .news-grid { display:grid; grid-template-columns:1fr; gap:40px; }
+    @media(min-width:768px){ .news-grid{ grid-template-columns:1fr 1fr; } }
+    @media(min-width:1024px){ .news-grid{ grid-template-columns:1fr 1fr 1fr; } }
+
+    .news-item { background-color:transparent; }
+    .news-poster {
+      width:100%; display:block; box-shadow:0 4px 12px rgba(0,0,0,0.2); border-radius:12px;
+    }
+    .news-text {
+      font-size:18px; margin:16px 0 10px; color:#333; padding:0 3px;
+    }
+    .news-date {
+      font-size:14px; color:#777; margin-bottom:10px; padding:0 3px; margin-top:-6px;
+    }
+
+    .read-more {
+      display:inline-block; margin-left:3px; margin-bottom:10px; padding:5px 12px;
+      background-color:transparent; color:#000; text-decoration:none; border:1.5px solid #000;
+      border-radius:6px; font-size:13px; font-weight:500; cursor:pointer;
+      transition:background-color .3s, color .3s;
+    }
+    .read-more:hover { background-color:#000; color:#fff; }
+
+    #news-detail { display:none; }
+    .news-description {
+      font-size:16px; line-height:1.6; padding:0 3px; margin-bottom:20px; white-space:pre-wrap;
+    }
+    .news-description a {
+      color: #000;
+      text-decoration: underline;
+    }
+    .back-button {
+      display:inline-block; margin-left:3px; padding:8px 12px; background-color:transparent;
+      color:#000; text-decoration:none; border:1.5px solid #000; border-radius:6px;
+      font-size:13px; font-weight:500; cursor:pointer;
+    }
+    .back-button:hover { background-color:#000; color:#fff; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="https://ukrtelecom.store/img/logo.png" alt="Логотип">
+    <nav class="desktop-menu">
+      <a href="https://укртелеком.pp.ua">Головна</a>
+      <a href="Новини">Новини</a>
+      <a href="https://ukrtelecom.ua/payment/generate-bill">Оплата</a>
+      <a href="Кабінет">Кабінет</a>
+      <a href="Контакти">Контакти</a>
+    </nav>
+    <img src="https://www.svgrepo.com/show/311018/navigation.svg" alt="Меню" class="menu-icon" id="menuToggle">
+  </header>
+
+  <div class="menu" id="menu">
+    <a href="https://укртелеком.pp.ua">Головна</a>
+    <a href="Новини">Новини</a>
+    <a href="https://ukrtelecom.ua/payment/generate-bill">Оплата</a>
+    <a href="Кабінет">Кабінет</a>
+    <a href="Контакти">Контакти</a>
+  </div>
+
+  <div id="news-container">
+    <div class="news-grid" id="news-grid"></div>
+  </div>
+
+  <div id="news-detail"></div>
+
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const menu = document.getElementById('menu');
+    let menuOpen = false;
+    menuToggle.addEventListener('click', () => {
+      menuOpen = !menuOpen;
+      menu.classList.toggle('active');
+      menuToggle.src = menuOpen ? 'https://www.svgrepo.com/show/440627/navigationclose.svg' : 'https://www.svgrepo.com/show/311018/navigation.svg';
+    });
+
+    let newsData = [];
+
+    window.onload = () => {
+      fetch('news.json?v=' + Date.now())
+        .then(r => r.json())
+        .then(data => { newsData = data; renderNewsList(); })
+        .catch(err => {
+          console.error('Помилка завантаження news.json', err);
+          document.getElementById('news-grid').innerHTML = '<p>Не вдалось завантажити новини.</p>';
+        });
+    };
+
+    function escapeHtml(str) {
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+    }
+
+    function escapeAttr(str) {
+      return String(str).replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+    }
+
+    function renderNewsList() {
+      const grid = document.getElementById('news-grid');
+      const detail = document.getElementById('news-detail');
+      grid.innerHTML = '';
+      detail.style.display = 'none';
+      document.getElementById('news-container').style.display = 'block';
+
+      newsData.forEach(item => {
+        const id = item.id || '';
+        const poster = item.poster ? item.poster : '';
+        const text = item.text || '';
+        const date = item.date || '';
+
+        const newsBlock = document.createElement('div');
+        newsBlock.className = 'news-item';
+        newsBlock.innerHTML = `
+          <img src="${escapeAttr(poster)}" alt="Постер" class="news-poster" onerror="this.src='https://via.placeholder.com/600x400?text=Зображення+недоступне'">
+          <div class="news-text">${escapeHtml(text)}</div>
+          <div class="news-date">${escapeHtml(date)}</div>
+          <button class="read-more" onclick="showDetail('${escapeAttr(id)}')">Читати далі →</button>
+        `;
+        grid.appendChild(newsBlock);
+      });
+    }
+
+    function formatDescription(raw) {
+      if (raw === null || raw === undefined) return '';
+      const s = String(raw);
+      const parts = [];
+      let buf = '';
+      let inBraces = false;
+      for (let i = 0; i < s.length; i++) {
+        const ch = s[i];
+        if (ch === '{') {
+          inBraces = true;
+          buf += ch;
+        } else if (ch === '}') {
+          inBraces = false;
+          buf += ch;
+        } else if (ch === '/' && !inBraces) {
+          parts.push(buf);
+          buf = '';
+        } else {
+          buf += ch;
+        }
+      }
+      parts.push(buf);
+
+      const out = parts.map(part => {
+        const trimmed = part.trim();
+        if (!trimmed) return '';
+        // Заміна всіх входжень url={Text}+{URL}
+        const replaced = trimmed.replace(/url=\{([^}]+)\}\+\{([^}]+)\}/g, (m, text, url) => {
+          const safeText = escapeHtml(text.trim());
+          let safeUrl = url.trim();
+          try { safeUrl = encodeURI(safeUrl); } catch (e) {}
+          return `<a href="${safeUrl}" target="_blank" rel="noopener noreferrer">${safeText}</a>`;
+        });
+
+        // Захищаємо інший текст, залишаючи <a> теги незмінними
+        const fragRegex = /(<a [^>]*>.*?<\/a>)/g;
+        return replaced.split(fragRegex).map(f => {
+          if (!f) return '';
+          return fragRegex.test(f) ? f : escapeHtml(f);
+        }).join('');
+      }).filter(Boolean);
+
+      return out.join('<br><br>');
+    }
+
+    function showDetail(id) {
+      const item = newsData.find(n => String(n.id) === String(id));
+      if (!item) return;
+      const container = document.getElementById('news-container');
+      const detail = document.getElementById('news-detail');
+      container.style.display = 'none';
+      detail.style.display = 'block';
+
+      const poster = item.poster ? item.poster : '';
+      const formattedDescription = formatDescription(item.description || '');
+
+      detail.innerHTML = `
+        <img src="${escapeAttr(poster)}" alt="Постер" class="news-poster" onerror="this.src='https://via.placeholder.com/600x400?text=Зображення+недоступне'">
+        <div class="news-text">${escapeHtml(item.text || '')}</div>
+        <div class="news-date">${escapeHtml(item.date || '')}</div>
+        <div class="news-description">${formattedDescription}</div>
+        <button class="back-button" onclick="renderNewsList()">← Назад</button>
+      `;
+    }
+  </script>
+</body>
+</html>

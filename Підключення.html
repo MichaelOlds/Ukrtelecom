@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Підключитися</title>
+    <link rel="icon" href="images/ukrtelecom.png" type="image/png">
+  
+  <!-- SEO -->
+  <meta property="og:url" content="https://укртелеком.pp.ua/Підключитися">
+  <meta property="og:image" content="images/poster-connect.png">
+  <meta property="og:site_name" content="Укртелеком">
+  <meta property="og:title" content="🔥 Підключитися до Укртелеком.">
+  <meta name="description" content="🔥 Підключитися до Укртелеком." />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Noto+Emoji&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', 'Noto Emoji', sans-serif;
+      background: #ffffff;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background-color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    header img {
+      height: 36px;
+    }
+
+    .menu-icon {
+      width: 28px;
+      height: 28px;
+      cursor: pointer;
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .menu {
+      position: fixed;
+      top: 66px;
+      left: 0;
+      right: 0;
+      background-color: white;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      animation: slideDown 0.3s ease forwards;
+    }
+
+    .menu.active {
+      display: flex;
+    }
+
+    .menu a {
+      padding: 12px 20px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      width: 100%;
+      text-align: center;
+      border-bottom: 1px solid #eee;
+    }
+
+    .menu a:hover {
+      background-color: #f5f5f5;
+    }
+
+    @keyframes slideDown {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .desktop-menu {
+      display: none;
+      gap: 20px;
+    }
+
+    .desktop-menu a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      font-size: 16px;
+      transition: color 0.3s ease;
+    }
+
+    .desktop-menu a:hover {
+      color: #0077cc;
+    }
+
+    @media (min-width: 768px) {
+      .desktop-menu {
+        display: flex;
+      }
+
+      .menu-icon {
+        display: none;
+      }
+
+      .menu {
+        display: none !important;
+      }
+    }
+
+    .steps {
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      text-align: center;
+    }
+
+    .step {
+      font-size: 18px;
+      color: #333;
+      padding: 20px;
+    }
+
+    .step-icon {
+      background-color: #0077cc;
+      color: white;
+      width: 64px;
+      height: 64px;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px auto;
+      font-size: 32px;
+    }
+
+    .step-title {
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .step-text {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    .contact-bar {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 30px 20px;
+      background-color: #f0f4ff;
+      flex-wrap: wrap;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      border-radius: 16px;
+      padding: 10px 16px;
+      background-color: #ffffff;
+      font-weight: 500;
+      font-size: 18px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .contact-item .contact-icon {
+      width: 40px;
+      height: 40px;
+      margin-right: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .contact-item .contact-icon img {
+      width: 86%;
+      height: auto;
+      border-radius: 8px;
+      filter: none;
+    }
+
+    .contact-item.telegram {
+      color: #0088cc;
+    }
+    .contact-item.telegram .contact-icon img {
+      filter: invert(34%) sepia(99%) saturate(747%) hue-rotate(183deg) brightness(95%) contrast(101%);
+    }
+
+    .contact-item.viber {
+      color: #665CAC;
+    }
+    .contact-item.viber .contact-icon img {
+      filter: invert(26%) sepia(100%) saturate(746%) hue-rotate(210deg) brightness(90%) contrast(92%);
+    }
+
+    .contact-item.call {
+      color: #34A853;
+    }
+    .contact-item.call .contact-icon img {
+      filter: invert(45%) sepia(83%) saturate(469%) hue-rotate(88deg) brightness(95%) contrast(92%);
+    }
+
+    .contact-text {
+      font-weight: 600;
+      margin-left: -5px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="https://ukrtelecom.store/img/logo.png" alt="Логотип">
+    <nav class="desktop-menu">
+      <a href="https://укртелеком.pp.ua">Головна</a>
+      <a href="Новини">Новини</a>
+      <a href="Оплата">Оплата</a>
+      <a href="https://ukrtelecom.ua/payment/generate-bill">Кабінет</a>
+      <a href="Контакти">Контакти</a>
+    </nav>
+    <img src="https://www.svgrepo.com/show/311018/navigation.svg" alt="Меню" class="menu-icon" id="menuToggle">
+  </header>
+
+  <div class="menu" id="menu">
+    <a href="https://укртелеком.pp.ua">Головна</a>
+    <a href="Новини">Новини</a>
+    <a href="Оплата">Оплата</a>
+    <a href="https://ukrtelecom.ua/payment/generate-bill">Кабінет</a>
+    <a href="Контакти">Контакти</a>
+  </div>
+
+  <div class="steps">
+    <div class="step">
+      <div class="step-icon">⌲</div>
+      <div class="step-title">Надішліть заяву</div>
+      <div class="step-text">Зв'яжіться з нашим менеджером у Viber, Telegram або зателефонуйте.</div>
+    </div>
+
+    <div class="step">
+      <div class="step-icon">🕐</div>
+      <div class="step-title">Час підключення</div>
+      <div class="step-text">Виберіть зручну дату та час підключення.</div>
+    </div>
+
+    <div class="step">
+      <div class="step-icon">🏡</div>
+      <div class="step-title">Очікуйте майстрів</div>
+      <div class="step-text">Наші співробітники приїдуть до вас для підключення у вибраний зручний для вас час.</div>
+    </div>
+
+    <div class="step">
+      <div class="step-icon">🔥</div>
+      <div class="step-title">Готово</div>
+      <div class="step-text">Насолоджуйтесь швидкісним інтернетом від Укртелеком.</div>
+    </div>
+  </div>
+
+  <div class="contact-bar">
+    <a class="contact-item telegram" href="https://t.me/+380969803151" target="_blank">
+      <div class="contact-icon">
+        <img src="/images/telegram.svg" alt="Telegram">
+      </div>
+      <div class="contact-text">Написати</div>
+    </a>
+    <a class="contact-item viber" href="viber://chat?number=380969803151" target="_blank">
+      <div class="contact-icon">
+        <img src="/images/viber.svg" alt="Viber">
+      </div>
+      <div class="contact-text">Написати</div>
+    </a>
+        <a class="contact-item call" href="tel:+380969803151">
+      <div class="contact-icon">
+        <img src="/images/call.svg" alt="Call">
+      </div>
+      <div class="contact-text">Телефонувати</div>
+    </a>
+  </div>
+
+  <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const menu = document.getElementById("menu");
+    let menuOpen = false;
+
+    menuToggle.addEventListener("click", () => {
+      menuOpen = !menuOpen;
+      menu.classList.toggle("active");
+      menuToggle.src = menuOpen
+        ? "https://www.svgrepo.com/show/440627/navigationclose.svg"
+        : "https://www.svgrepo.com/show/311018/navigation.svg";
+    });
+  </script>
+</body>
+</html>
