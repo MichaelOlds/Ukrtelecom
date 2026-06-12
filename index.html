@@ -413,5 +413,19 @@
     // Встановлення поточного року у футері
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
+
+  <script>
+  const params = new URLSearchParams(window.location.search);
+
+  const value = params.get("");
+
+  if (value === "1") {
+    document.title = "Укртелеком Закарпаття";
+  } else if (value === "2") {
+    document.title = "Оптика Укртелеком";
+  } else if (value === "3") {
+    document.title = "Інтернет Закарпаття";
+  }
+  </script>
 </body>
 </html>
